@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Ubuntu", sans-serif;
+        overflow-x: hidden; /* Prevents horizontal scroll */
+      }
+      .active {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <section class="container w-full px-4 md:px-10 mx-auto py-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center"
+      >
+        <!-- Left Content -->
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl font-bold mb-4 text-[#0b57a5]">
+            The Nucleus Wealth Solution
+          </h2>
+
+          <p class="text-gray-600 mb-4">Personalised investment management.</p>
+
+          <div class="text-gray-700 space-y-4">
+            <div class="flex items-center gap-2">
+              <img src="piggy.png" alt="Piggy Bank" class="w-6 h-6" />
+              <span>Super investments: personal super and SMSFs</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="check-mark.png" alt="Check Mark" class="w-6 h-6" />
+              <span
+                >Non-super investments: individual, joint, company, and
+                trust</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="scale.png" alt="Scale" class="w-6 h-6" />
+              <span
+                >Personalise to your ethical beliefs or investment outlook with
+                our screens and tilts</span
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="run.png" alt="Run" class="w-6 h-6" />
+              <span
+                >Choose between active and passive management of your
+                investment</span
+              >
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+          >
+            Meet the Team
+          </a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="flex justify-center md:justify-end mt-8">
+          <img
+            src="wealth1.png"
+            alt="Investment Options"
+            class="w-full max-w-xs md:max-w-md rounded-lg object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

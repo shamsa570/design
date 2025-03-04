@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Ubuntu", sans-serif;
+      }
+      .active {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container mx-[20px] md:mx-auto py-10 overflow-y-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <!-- Left Side (Text) -->
+        <div class="self-start">
+          <h2 class="text-3xl font-bold mb-4 text-[#0b57a5]">Custom Indexes</h2>
+
+          <p class="text-gray-600 mb-4">
+            Tailor your superannuation and investment portfolios with Nucleus
+            Direct Indexing’s innovative, award-winning, direct investing
+            solution.
+          </p>
+
+          <a
+            href="#"
+            class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+          >
+            Start Now
+          </a>
+        </div>
+
+        <!-- Right Side (Image) -->
+        <div>
+          <img
+            src="DirectIndexing.webp"
+            alt="Investment Options"
+            class="w-full max-w-sm rounded-lg object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

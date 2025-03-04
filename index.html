@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Ubuntu", sans-serif;
+      }
+      .active {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation (Hidden on small screens) -->
+    <nav class="bg-[#0b57a5] text-white p-4 text-center top-nav md:block">
+      <ul class="flex justify-center space-x-6">
+        <li>
+          <a
+            href="#"
+            class="nav-link"
+            data-section="wealth"
+            onclick="showPage(event, 'wealth')"
+            >Wealth Management</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="nav-link"
+            data-section="indexing"
+            onclick="showPage(event, 'indexing')"
+            >Direct Indexing</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="nav-link"
+            data-section="ethical"
+            onclick="showPage(event, 'ethical')"
+            >Ethical Investing</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="nav-link"
+            data-section="super"
+            onclick="showPage(event, 'super')"
+            >Superannuation</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Navigation (Mobile) -->
+    <div
+      id="sidebar"
+      class="fixed top-0 left-0 w-64 h-full bg-white shadow-md p-5 transform -translate-x-full transition-transform md:hidden"
+    >
+      <button id="close-menu" class="text-4xl">&times;</button>
+      <ul id="sidebar-menu" class="mt-6 space-y-4">
+        <li>
+          <a href="#" onclick="toggleDropdown('wealth-dropdown')"
+            >Wealth Management</a
+          >
+          <ul id="wealth-dropdown" class="hidden pl-4 space-y-2"></ul>
+        </li>
+        <li>
+          <a href="#" onclick="toggleDropdown('indexing-dropdown')"
+            >Direct Indexing</a
+          >
+          <ul id="indexing-dropdown" class="hidden pl-4 space-y-2"></ul>
+        </li>
+        <li>
+          <a href="#" onclick="toggleDropdown('ethical-dropdown')"
+            >Ethical Investing</a
+          >
+          <ul id="ethical-dropdown" class="hidden pl-4 space-y-2"></ul>
+        </li>
+        <li>
+          <a href="#" onclick="toggleDropdown('super-dropdown')"
+            >Superannuation</a
+          >
+          <ul id="super-dropdown" class="hidden pl-4 space-y-2"></ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Secondary Navigation -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <img id="logo" src="wealth1.png" alt="Company Logo" class="h-10" />
+      </div>
+      <nav>
+        <ul id="secondary-nav" class="hidden md:flex space-x-6">
+          <!-- Secondary links will be inserted dynamically -->
+        </ul>
+      </nav>
+      <div class="md:flex space-x-4">
+        <a href="demo.html" class="bg-blue-500 text-white px-4 py-2 rounded"
+          >Login</a
+        >
+        <a href="demo.html" class="bg-red-500 text-white px-4 py-2 rounded"
+          >Get Started</a
+        >
+      </div>
+    </header>
+
+    <!-- Dynamic Content Section -->
+    <div id="content" class="p-6 bg-white shadow-md mt-4">
+      <iframe
+        src="home.html"
+        id="content-frame"
+        class="w-full h-screen border-none"
+      ></iframe>
+    </div>
+
+    <footer class="bg-[#0b57a5] text-white p-10 mt-6">
+      <div
+        class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left"
+      >
+        <!-- Solutions -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Solutions</h3>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:underline">Ethical Investing</a></li>
+            <li><a href="#" class="hover:underline">Superannuation</a></li>
+            <li><a href="#" class="hover:underline">Portfolios</a></li>
+            <li><a href="#" class="hover:underline">Intermediaries</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Company</h3>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">FAQs</a></li>
+            <li><a href="#" class="hover:underline">Media</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li>
+              <a href="#" class="hover:underline"
+                >How we use your information</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Contact</h3>
+          <p>Level 5, 447 Collins Street</p>
+          <p>Melbourne Victoria 3000</p>
+          <p class="mt-2">1300 623 863</p>
+          <p>
+            <a
+              href="mailto:contact@nucleuswealth.com"
+              class="text-blue-400 hover:underline"
+              >contact@nucleuswealth.com</a
+            >
+          </p>
+          <button
+            class="mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Book a free consultation
+          </button>
+        </div>
+
+        <!-- Latest Insights -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Latest Insights</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:underline"
+                >Housing Affordability Update | Nucleus</a
+              >
+            </li>
+            <li><a href="#" class="hover:underline">Investment Insights</a></li>
+            <li>
+              <a href="#" class="hover:underline"
+                >Is the stock bubble about to burst?</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline"
+                >RBA rate cuts trigger house price rebound</a
+              >
+            </li>
+          </ul>
+          <button
+            class="mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <!-- Invest With Us -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Invest With Us</h3>
+          <button
+            class="bg-yellow-400 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-500"
+          >
+            Get Started
+          </button>
+          <ul class="space-y-1 mt-2">
+            <li><a href="#" class="hover:underline">Member login</a></li>
+            <li><a href="#" class="hover:underline">Leave us a review</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center text-gray-400 mt-8">
+        <p>&copy; 2025 Financial Services Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js">
+      
+    </script>
+  </body>
+</html>
