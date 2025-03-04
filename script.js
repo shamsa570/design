@@ -9,7 +9,7 @@ const sections = {
     ],
   },
   indexing: {
-    logo: "index.jpg",
+    logo: " Direct-Indexing-29AAC8.webp",
     links: [
       { text: "Home", file: "homeindex.html" },
       { text: "Strategy", file: "homeindex.html" },
